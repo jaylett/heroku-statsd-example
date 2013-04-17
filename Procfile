@@ -1,1 +1,1 @@
-web: gunicorn -b "0.0.0.0:$PORT" -w 4 web:app
+web: USER=nobody PORT=$PORT honcho -f Procfile.chain start
